@@ -7,4 +7,5 @@ public class FireStation extends BuildingImpl {
   public FireStation(CityNode location) {
     super(location, true);
   }
+
 }

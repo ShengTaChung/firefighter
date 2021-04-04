@@ -6,15 +6,16 @@ import api.FireDispatch;
 import api.Firefighter;
 import api.Pyromaniac;
 import api.exceptions.FireproofBuildingException;
+import api.exceptions.NoFirefighterFoundException;
 import impls.CityImpl;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-public class BasicScenarios {
+public class BasicScenariosTest {
   @Test
-  public void singleFire() throws FireproofBuildingException {
+  public void singleFire() throws FireproofBuildingException, NoFirefighterFoundException {
     City basicCity = new CityImpl(5, 5, new CityNode(0, 0));
     FireDispatch fireDispatch = basicCity.getFireDispatch();
 
@@ -27,7 +28,7 @@ public class BasicScenarios {
   }
 
   @Test
-  public void singleFireDistanceTraveledDiagonal() throws FireproofBuildingException {
+  public void singleFireDistanceTraveledDiagonal() throws FireproofBuildingException, NoFirefighterFoundException {
     City basicCity = new CityImpl(2, 2, new CityNode(0, 0));
     FireDispatch fireDispatch = basicCity.getFireDispatch();
 
@@ -44,7 +45,7 @@ public class BasicScenarios {
   }
 
   @Test
-  public void singleFireDistanceTraveledAdjacent() throws FireproofBuildingException {
+  public void singleFireDistanceTraveledAdjacent() throws FireproofBuildingException, NoFirefighterFoundException {
     City basicCity = new CityImpl(2, 2, new CityNode(0, 0));
     FireDispatch fireDispatch = basicCity.getFireDispatch();
 
@@ -61,7 +62,7 @@ public class BasicScenarios {
   }
 
   @Test
-  public void simpleDoubleFire() throws FireproofBuildingException {
+  public void simpleDoubleFire() throws FireproofBuildingException, NoFirefighterFoundException {
     City basicCity = new CityImpl(2, 2, new CityNode(0, 0));
     FireDispatch fireDispatch = basicCity.getFireDispatch();
 
@@ -82,7 +83,7 @@ public class BasicScenarios {
   }
 
   @Test
-  public void doubleFirefighterDoubleFire() throws FireproofBuildingException {
+  public void doubleFirefighterDoubleFire() throws FireproofBuildingException, NoFirefighterFoundException {
     City basicCity = new CityImpl(2, 2, new CityNode(0, 0));
     FireDispatch fireDispatch = basicCity.getFireDispatch();
 
