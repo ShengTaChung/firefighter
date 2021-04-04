@@ -20,6 +20,12 @@ public class CityImpl implements City {
     this.buildingGrid = initBuildingGrid(xDimension, yDimension);
   }
 
+  public CityImpl(int xDimension, int yDimension, FireStation fireStation) {
+    validateCityDimensions(xDimension, yDimension);
+    this.fireStation = fireStation;
+    this.buildingGrid = initBuildingGrid(xDimension, yDimension);
+  }
+
   @Override
   public Building getFireStation() {
     return fireStation;

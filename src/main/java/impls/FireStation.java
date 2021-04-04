@@ -8,4 +8,8 @@ public class FireStation extends BuildingImpl {
     super(location, true);
   }
 
+  public FireStation(CityNode location, boolean fireproof) {
+    super(location, fireproof);
+  }
+
 }
