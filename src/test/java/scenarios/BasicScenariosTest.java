@@ -22,8 +22,8 @@ public class BasicScenariosTest {
     CityNode fireNode = new CityNode(0, 1);
     Pyromaniac.setFire(basicCity, fireNode);
 
-    fireDispatch.setFirefighters(1);
-    fireDispatch.dispatchFirefighers(fireNode);
+    fireDispatch.hireFirefighters(1);
+    fireDispatch.dispatchFirefighters(fireNode);
     Assert.assertFalse(basicCity.getBuilding(fireNode).isBurning());
   }
 
@@ -36,8 +36,8 @@ public class BasicScenariosTest {
     CityNode fireNode = new CityNode(1, 1);
     Pyromaniac.setFire(basicCity, fireNode);
 
-    fireDispatch.setFirefighters(1);
-    fireDispatch.dispatchFirefighers(fireNode);
+    fireDispatch.hireFirefighters(1);
+    fireDispatch.dispatchFirefighters(fireNode);
 
     Firefighter firefighter = fireDispatch.getFirefighters().get(0);
     Assert.assertEquals(2, firefighter.distanceTraveled());
@@ -53,8 +53,8 @@ public class BasicScenariosTest {
     CityNode fireNode = new CityNode(1, 0);
     Pyromaniac.setFire(basicCity, fireNode);
 
-    fireDispatch.setFirefighters(1);
-    fireDispatch.dispatchFirefighers(fireNode);
+    fireDispatch.hireFirefighters(1);
+    fireDispatch.dispatchFirefighters(fireNode);
 
     Firefighter firefighter = fireDispatch.getFirefighters().get(0);
     Assert.assertEquals(1, firefighter.distanceTraveled());
@@ -72,8 +72,8 @@ public class BasicScenariosTest {
         new CityNode(1, 1)};
     Pyromaniac.setFires(basicCity, fireNodes);
 
-    fireDispatch.setFirefighters(1);
-    fireDispatch.dispatchFirefighers(fireNodes);
+    fireDispatch.hireFirefighters(1);
+    fireDispatch.dispatchFirefighters(fireNodes);
 
     Firefighter firefighter = fireDispatch.getFirefighters().get(0);
     Assert.assertEquals(2, firefighter.distanceTraveled());
@@ -93,8 +93,8 @@ public class BasicScenariosTest {
         new CityNode(1, 0)};
     Pyromaniac.setFires(basicCity, fireNodes);
 
-    fireDispatch.setFirefighters(2);
-    fireDispatch.dispatchFirefighers(fireNodes);
+    fireDispatch.hireFirefighters(2);
+    fireDispatch.dispatchFirefighters(fireNodes);
 
     List<Firefighter> firefighters = fireDispatch.getFirefighters();
     int totalDistanceTraveled = 0;

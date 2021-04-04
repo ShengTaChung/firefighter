@@ -28,7 +28,7 @@ public class FireDispatchImpl implements FireDispatch {
   }
 
   @Override
-  public void setFirefighters(int numFirefighters) {
+  public void hireFirefighters(int numFirefighters) {
     for (int i = 0; i < numFirefighters; i++) {
       firefightersAtStation.add(new FirefighterImpl(city.getFireStation().getLocation()));
     }
@@ -43,7 +43,7 @@ public class FireDispatchImpl implements FireDispatch {
   }
 
   @Override
-  public void dispatchFirefighers(CityNode... burningBuildings) throws NoFirefighterFoundException {
+  public void dispatchFirefighters(CityNode... burningBuildings) throws NoFirefighterFoundException {
     for (CityNode cityNode : burningBuildings) {
       if (CollectionUtils.isEmpty(getFirefighters())) {
         throw new NoFirefighterFoundException();
